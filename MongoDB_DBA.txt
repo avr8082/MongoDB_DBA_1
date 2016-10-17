@@ -1,17 +1,17 @@
-******************************** MongoDB DBA ***************************************************************
+*************************************************     MongoDB DBA      ***************************************************************
+$$$$$  WEEK 1 $$$$$$
 
 # mongoimport 
 
 Run the import command from MongoDB bin folder and also use command Mongoimport --db pcat --collection products < folder_path\file_name.json
 
-
-****
+#in my laptop
 C:\Program Files\MongoDB\Server\3.2\bin>Mongoimport --db pcat --collection products < C:\Users\lenovo-pc\Desktop\MongoDB\DBA_Week1\Products__hw1.2.json
 
 # 11 documents imported 
 # change to db pcat then run the query --> db.products.find( { type : "case" } ).count()
 
-db.products.find( {}, {name:1, _id: 0}).sort( { name :1})
+> db.products.find( {}, {name:1, _id: 0}).sort( { name :1})
 
 Ans:
 
@@ -27,7 +27,7 @@ Ans:
 { "name" : "Phone Service Core Plan" }
 { "name" : "Phone Service Family Plan" }
 
-var c = db.products.find ( {}, { name : 1, _id:0}).sort({name:1});
+> var c = db.products.find ( {}, { name : 1, _id:0}).sort({name:1});
 while (c.hasNext() ) {
      print (c.next().name);
 }
@@ -45,7 +45,7 @@ Phone Service Basic Plan
 Phone Service Core Plan
 Phone Service Family Plan
 
-var c = db.products.find( {} ). sort({ name: 1}) ;
+> var c = db.products.find( {} ). sort({ name: 1}) ;
 c.forEach ( function( doc ) { print (doc.name)});
 
 Ans:
@@ -61,7 +61,7 @@ Phone Service Basic Plan
 Phone Service Core Plan
 Phone Service Family Plan
 
-var c = db.products.find ( {} ).sort({name:-1});
+> var c = db.products.find ( {} ).sort({name:-1});
 while (c.hasNext() ) {
      print (c.next().name);
 }
@@ -78,3 +78,4 @@ AC3 Phone
 AC3 Case Red
 AC3 Case Green
 AC3 Case Black
+
