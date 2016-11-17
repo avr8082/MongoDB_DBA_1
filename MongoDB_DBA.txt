@@ -1,6 +1,4 @@
 *************************************************     MongoDB DBA      ***************************************************************
-$$$$$  WEEK 1 $$$$$$
-
 # mongoimport 
 
 Run the import command from MongoDB bin folder and also use command Mongoimport --db pcat --collection products < folder_path\file_name.json
